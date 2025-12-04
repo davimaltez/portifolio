@@ -4,34 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portifólio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>Portifólio</h1>
-        <a href="index.html">início</a>
-        <a href="projetos.html">projetos</a>
-        <a href = "contato.html">contato</a>
+
+        <div class="logo">DAVI.DEV</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" style="color: #e50914;">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+
     </header>
 
-    <h1>Bem-Vindo!</h1>
+    <section id="home">
 
-    <section id = "home">
-        <h2>Sobre Mim</h2>
-        <p>Oii, prazer, me chamo Davi Maltez, sou estudante de Ciências da Computação na Cesar School, e tenho uma paixão enorme pela área de T.I.</p>
-        <br>
-        <p>Aprendo a maior parte das coisas na prática, desde meu primeiro “Hello World” em Python ao primeiro LED queimado no Arduino, venho juntando lógica, curiosidade e prática, aprendendo muito com meus erros (led queimado, por exemplo), e construindo pequenos sistemas que resolvem problemas reais. </p>
-        <br>
-        <p>Aberto a desafios, colaboração e a transformar experimentos em soluções úteis. Se quiser saber mais, é só entrar em contato :-D</p> 
+        <h1>Bem-Vindo!</h1>
 
-        <h2>Competências</h2>
-        <p>Python | JavaScript | HTML & CSS</p>
-        <p>Pensamento Analítico e Lógico</p>
-        <p>Programação Orientada a Objetos</p>
-        <p>Comunicativo</p>
+        <p style="color: #777; margin-bottom: 20px;">Portfólio Acadêmico - Ciência da Computação</p>
 
-        <h2>Certificações</h2>
-        <p></p>
+        <div class="sobre-container">
+            
+            <div class="profile-header">
+
+                <img src="eu.JPG" alt="Foto de Perfil de Davi Maltez" class="profile-img">
+                
+                <div class="profile-info">
+                    <h2>Sobre Mim</h2>
+
+                    <div class="texto-destaque">
+                        <p>Oii, prazer! Me chamo <strong>Davi Maltez</strong>.</p> 
+                    </div>
+            </div>
+        </div>
+                
+
+                
+
+            
+
+            <div class="texto-destaque">
+                
+                <br>
+                <p>Sou estudante de Ciências da Computação na <strong>Cesar School</strong> e tenho uma paixão enorme pela área de T.I. Aprendo a maior parte das coisas na prática: desde meu primeiro <em>“Hello World”</em> em Python ao primeiro LED queimado no Arduino.</p>
+                <br>
+                <p>Venho juntando lógica, curiosidade e prática, aprendendo muito com meus erros e construindo pequenos sistemas que resolvem problemas reais.</p> 
+                <br>
+                <p>Estou aberto a desafios, colaboração e a transformar experimentos em soluções úteis. Se quiser saber mais, é só entrar em contato! :-D</p>
+            </div>
+
+            <h2>Competências</h2>
+            <div class="skills-lista">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">HTML & CSS</span>
+                <span class="skill-tag">Lógica de Programação</span>
+                <span class="skill-tag">POO</span>
+                <span class="skill-tag">Arduino</span>
+                <span class="skill-tag">Comunicação</span>
+            </div>
+
+            <h2>Certificações</h2>
+            <p style="font-size: 0.9rem; color: #999; margin-bottom: 10px;">Clique nos selos para validar:</p>
+            
+            <div class="certificados-container">
+
+                <a id="CerticadoJS" href="https://www.credly.com/badges/68b45163-7a1d-4e45-bdd8-453c26fc99b1/public_url" target="_blank">
+                    <img src="certJS.png" alt="Certificado JavaScript" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<span style=\'color:white\'>[Img JS]</span>')">
+                </a>
+
+
+                <a id="CerticadoPY" href="https://www.credly.com/badges/9df87c8b-a0e5-460b-bade-47ce7bbc7419/public_url" target="_blank">
+                    <img src="certPy.png" alt="Certificado Python" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<span style=\'color:white\'>[Img Python]</span>')">
+                </a>
+            </div>
+        </div>
     </section>
     
+    <footer>
+        <p>&copy; 2024 Davi Maltez - Desenvolvido para Projeto Final</p>
+    </footer>
+
 </body>
 </html>
