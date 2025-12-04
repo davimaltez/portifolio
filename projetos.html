@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Projetos | Davi Maltez</title>
+    <link rel="stylesheet" href="style2.CSS">
+</head>
+<body>
+
+    <header>
+        <div class="logo">DAVI.DEV</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html" style="color:#e50914">Projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="projetos">
+
+        <h1>Meus Projetos</h1>
+
+        <p class="subtitulo">Aqui você encontra meus projetos acadêmicos. Clique em GitHub para ver o código.</p>
+        
+        <div class="projetos-lista">
+            
+            <!-- PROJETO 1: BISPO SENTINELA-->
+            <div class="cartaz-projeto">
+
+            
+                <img src="bispo.png" alt="Projeto Bispo Sentinela" class="capa-img">
+                
+                <h3>Projeto Bispo Sentinela</h3>
+
+                <span class="techs">Python • Lógica </span>
+                
+                <div class="botoes-container">
+                    
+                    <button class="btn btn-sinopse" onclick="verSinopse('desc1')">Detalhes</button>
+                
+                    <a href="https://github.com/davimaltez/Projeto-Bispo-Sentinela.git" target="_blank" class="btn btn-github">GitHub</a>
+
+                </div>
+
+                <div id="desc1" class="descricao-projeto">
+                    
+                    <p><strong>Descrição:</strong> Um sistema de lógica de xadrez focado no movimento das peças, especificamente a lógica diagonal do Bispo. Desenvolvido para treinar matrizes e condicionais em Python.</p>
+                
+                </div>
+            </div>
+
+            <!-- PROJETO 2: ADOÇÃO PLUS -->
+            <div class="cartaz-projeto">
+
+                
+                <img src="cachorro.png" alt="Projeto Adoção Plus" class="capa-img">
+                
+                <h3>Sistema Adoção PLUS</h3>
+
+                <span class="techs">Python • CSV</span>
+                
+                <div class="botoes-container">
+
+                    <button class="btn btn-sinopse" onclick="verSinopse('desc2')">Detalhes</button>
+
+                    <a href="https://github.com/leticia-siqueira/Projeto-FP.git" target="_blank" class="btn btn-github">GitHub</a>
+                </div>
+
+                <div id="desc2" class="descricao-projeto">
+
+                    <p><strong>Descrição:</strong> Projeto Criado para facilitar o trabalho de um centro de adoções, ao cadastrar animais, cuidados, adoções e atividades. </p>
+                
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    
+    <script>
+        function verSinopse(id) {
+            var elemento = document.getElementById(id);
+            if (elemento.style.display === "block") {
+                elemento.style.display = "none";
+            } else {
+                elemento.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
