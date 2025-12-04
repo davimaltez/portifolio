@@ -60,7 +60,7 @@
                 
                 <h3>Sistema Adoção PLUS</h3>
 
-                <span class="techs">Python • CSV</span>
+                <span class="techs">Python • Manipulação de Arquivos</span>
                 
                 <div class="botoes-container">
 
@@ -76,13 +76,37 @@
                 </div>
             </div>
 
+            <div class = "cartaz-projeto">
+
+                <img src="criptografia.png" alt = "Projeto criptografia" class="capa-img">
+
+                <h3>Projeto criptografia</h3>
+
+                <span class="techs">Python • Matrizes </span>
+
+                <div class="botoes-container">
+
+                    <button class="btn btn-sinopse" onclick = "verSinopse('desc3')">Detalhes</button>
+
+                    <a href="https://github.com/davimaltez/Projeto-Criptografia-.git" target="_blank" class="btn btn-github">GitHub</a>
+
+                </div>
+
+                <div id="desc3" class="descricao-projeto"> 
+
+                    <p><strong>Descrição:</strong> Projeto Criado para trabalhar conceitos de matrizes, e matrizes inversas para criptografia de dados.</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
     
     <script>
         function verSinopse(id) {
+
             var elemento = document.getElementById(id);
+
             if (elemento.style.display === "block") {
                 elemento.style.display = "none";
             } else {
