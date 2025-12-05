@@ -1,0 +1,163 @@
+/* --- ESTILOS GERAIS (Mantidos da sua base) --- */
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #1a1a1a; 
+            color: white; 
+            line-height: 1.6; 
+        }
+        
+        /* HEADER */
+        header { 
+            background-color: #000; 
+            padding: 20px 40px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 2px solid #e50914; 
+        }
+
+        .logo { 
+            font-size: 24px; 
+            font-weight: bold; 
+            color: #e50914; 
+            text-transform: uppercase; 
+        }
+
+        nav ul { 
+            list-style: none; 
+            display: flex; 
+        }
+
+        nav ul li { 
+            margin-left: 20px; 
+        }
+
+        nav a { 
+            text-decoration: none; 
+            color: white; 
+            font-weight: bold; 
+            transition: 0.3s; 
+        }
+
+        nav a:hover { 
+            color: #e50914; 
+        }
+
+        
+        section { 
+            padding: 80px 20px; 
+            max-width: 700px; 
+            margin: 0 auto; 
+            text-align: center;
+            min-height: 80vh; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 { 
+            font-size: 2.5rem; 
+            margin-bottom: 10px; 
+        }
+
+        .subtitle {
+            color: #ccc;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        
+        .social-links {
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #222;
+            border: 1px solid #333;
+        }
+
+        .social-links h2 {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .icon-list {
+            display: flex;
+            justify-content: center;
+            gap: 40px; 
+            list-style: none;
+        }
+
+        .social-icon a {
+            color: white;
+            text-decoration: none;
+            font-size: 4rem; 
+            transition: color 0.3s, transform 0.3s;
+            display: block; 
+        }
+
+        .social-icon a:hover {
+            color: #e50914;
+            transform: translateY(-8px);
+        }
+
+       
+        .social-icon a i {
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            
+            font-size: inherit; 
+        }
+
+        
+        .linkedin::before {
+            content: "\f08c"; 
+            font-family: 'Font Awesome 6 Brands';
+        }
+
+        .github::before {
+            content: "\f09b"; 
+            font-family: 'Font Awesome 6 Brands';
+        }
+
+        .instagram::before {
+            content: "\f16d"; 
+            font-family: 'Font Awesome 6 Brands';
+        }
+
+        
+        .email::before {
+            content: "\f0e0"; 
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900; 
+        }
+        
+        /* RESPONSIVIDADE */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                padding: 15px 20px;
+            }
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav ul li {
+                margin: 5px 10px;
+            }
+            .social-icon a {
+                font-size: 3rem;
+            }
+            .icon-list {
+                gap: 20px;
+            }
+        }
