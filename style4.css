@@ -142,7 +142,7 @@
          /* --- responsividade celular --- */
         @media (max-width: 768px) {
             
-            /* Arruma o Cabeçalho/Menu no celular */
+            /* Ajuste Geral do Header para todas as páginas */
             header {
                 flex-direction: column;
                 padding: 15px;
@@ -154,8 +154,53 @@
                 margin-top: 15px;
             }
 
-            /* Garante que nada "vaze" da tela na horizontal */
-            body {
-                overflow-x: hidden;
+            /* Move a linha do tempo para a esquerda */
+            .timeline::before { 
+                left: 20px; /* A linha vertical começa em 20px da borda */
+            }
+            
+            /* FORÇA OS ITENS A USAR O ESPAÇO DISPONÍVEL, EMPILHANDO (Correção de Overflow) */
+            .timeline-item, 
+            .timeline-item:nth-child(even), 
+            .timeline-item:nth-child(odd) { 
+                flex-direction: column; 
+                align-items: flex-start; 
+                margin-left: 0; /* Remove a margem horizontal que causava o overflow */
+                margin-bottom: 50px;
+                width: 100%; /* Ocupa a largura total */
+            }
+            
+            /* Bolinha vermelha agora fica na esquerda */
+            .timeline-dot { 
+                left: 20px; 
+            }
+            
+            /* Caixa de Texto (Balão) */
+            .timeline-content { 
+                width: 100%; 
+                margin-bottom: 20px; 
+                /* Adiciona um preenchimento interno para afastar o texto da linha vertical */
+                padding-left: 50px; 
+            }
+            
+            /* Foto */
+            .timeline-photo { 
+                width: 100%; 
+                justify-content: flex-start; 
+                /* Adiciona um preenchimento para alinhar a foto com o texto */
+                padding-left: 50px; 
+            }
+            
+            .foto-ano { 
+                max-width: 100%; 
+                height: auto; 
+            }
+            
+            /* Ajusta a setinha do balão de texto para apontar para a linha da esquerda */
+            .timeline-item:nth-child(odd) .timeline-content::after,
+            .timeline-item:nth-child(even) .timeline-content::after {
+                right: auto; 
+                left: 40px; /* Alinhada com a nova posição da bolinha/linha */
+                border-color: transparent #222 transparent transparent;
             }
         }
