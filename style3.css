@@ -181,7 +181,6 @@
             color: white; 
         }
 
-        /* RESPONSIVIDADE (Celular) */
         @media (max-width: 768px) {
             
             /* Ajuste Geral do Header para todas as páginas */
@@ -198,18 +197,23 @@
 
             /* Move a linha do tempo para a esquerda */
             .timeline::before { 
-                left: 20px; /* A linha vertical começa em 20px da borda */
+                left: 20px; 
             }
             
-            /* FORÇA OS ITENS A USAR O ESPAÇO DISPONÍVEL, EMPILHANDO (Correção de Overflow) */
+            /* CORREÇÃO DO OVERFLOW (Margin/Width Calculation) */
             .timeline-item, 
             .timeline-item:nth-child(even), 
             .timeline-item:nth-child(odd) { 
                 flex-direction: column; 
                 align-items: flex-start; 
-                margin-left: 0; /* Remove a margem horizontal que causava o overflow */
+                
+                /* Empurra o bloco inteiro 45px para a direita (liberando espaço para a linha) */
+                margin-left: 45px; 
+                
+                /* Garante que a largura total não ultrapasse 100% */
+                width: calc(100% - 45px); 
+                
                 margin-bottom: 50px;
-                width: 100%; /* Ocupa a largura total */
             }
             
             /* Bolinha vermelha agora fica na esquerda */
@@ -217,32 +221,29 @@
                 left: 20px; 
             }
             
-            /* Caixa de Texto (Balão) */
-            .timeline-content { 
-                width: 100%; 
-                margin-bottom: 20px; 
-                /* Adiciona um preenchimento interno para afastar o texto da linha vertical */
-                padding-left: 50px; 
-            }
-            
-            /* Foto */
+            /* Caixa de Texto e Foto ocupam 100% da largura do novo container */
+            .timeline-content,
             .timeline-photo { 
                 width: 100%; 
-                justify-content: flex-start; 
-                /* Adiciona um preenchimento para alinhar a foto com o texto */
-                padding-left: 50px; 
+                margin-bottom: 20px; 
+                /* O padding original de 25px está OK, pois o width/margin já resolveu o espaçamento externo. */
+                padding-left: 25px; 
             }
             
-            .foto-ano { 
-                max-width: 100%; 
-                height: auto; 
+            .timeline-photo {
+                justify-content: flex-start; /* Alinha a foto à esquerda */
             }
             
             /* Ajusta a setinha do balão de texto para apontar para a linha da esquerda */
             .timeline-item:nth-child(odd) .timeline-content::after,
             .timeline-item:nth-child(even) .timeline-content::after {
                 right: auto; 
-                left: 40px; /* Alinhada com a nova posição da bolinha/linha */
+                left: -10px; /* Posiciona a setinha fora do balão, apontando para a linha */
                 border-color: transparent #222 transparent transparent;
+            }
+            
+            .foto-ano { 
+                max-width: 100%; 
+                height: auto; 
             }
         }
