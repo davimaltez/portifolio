@@ -132,7 +132,6 @@
 
         @media (max-width: 768px) {
             
-            /* Ajuste Geral do Header para todas as páginas */
             header {
                 flex-direction: column;
                 padding: 15px;
@@ -149,7 +148,6 @@
                 left: 20px; /* A linha vertical começa em 20px da borda */
             }
             
-            /* FORÇA OS ITENS A USAR O ESPAÇO DISPONÍVEL, EMPILHANDO (Correção de Overflow) */
             .timeline-item, 
             .timeline-item:nth-child(even), 
             .timeline-item:nth-child(odd) { 
