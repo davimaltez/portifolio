@@ -139,6 +139,7 @@
             font-size: 0.8rem;
         }
 
+        /* responsivida para celular */
         @media (max-width: 768px) {
             
             /* Ajusta o Header para empilhar */

@@ -129,3 +129,28 @@
             border-left: 3px solid #e50914;
             color: #ccc;
         }
+
+        /* --- responsividade celular --- */
+        @media (max-width: 768px) {
+            
+            /* Arruma o Cabeçalho/Menu no celular */
+            header {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 15px;
+            }
+
+            /* Garante que nada "vaze" da tela na horizontal */
+            body {
+                overflow-x: hidden;
+            }
+            
+            .projetos-lista {
+                padding: 0 10px;
+            }
+        }

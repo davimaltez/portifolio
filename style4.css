@@ -139,24 +139,23 @@
             font-weight: 900; 
         }
         
-        /* RESPONSIVIDADE */
-        @media (max-width: 600px) {
+         /* --- responsividade celular --- */
+        @media (max-width: 768px) {
+            
+            /* Arruma o Cabeçalho/Menu no celular */
             header {
                 flex-direction: column;
-                padding: 15px 20px;
+                padding: 15px;
             }
+
             nav ul {
-                margin-top: 15px;
                 flex-wrap: wrap;
                 justify-content: center;
+                margin-top: 15px;
             }
-            nav ul li {
-                margin: 5px 10px;
-            }
-            .social-icon a {
-                font-size: 3rem;
-            }
-            .icon-list {
-                gap: 20px;
+
+            /* Garante que nada "vaze" da tela na horizontal */
+            body {
+                overflow-x: hidden;
             }
         }
