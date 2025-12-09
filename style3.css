@@ -183,7 +183,7 @@
 
         @media (max-width: 768px) {
             
-            /* Ajuste Geral do Header para todas as páginas */
+            
             header {
                 flex-direction: column;
                 padding: 15px;
@@ -200,7 +200,7 @@
                 left: 20px; 
             }
             
-            /* CORREÇÃO DO OVERFLOW (Margin/Width Calculation) */
+            
             .timeline-item, 
             .timeline-item:nth-child(even), 
             .timeline-item:nth-child(odd) { 
@@ -226,7 +226,6 @@
             .timeline-photo { 
                 width: 100%; 
                 margin-bottom: 20px; 
-                /* O padding original de 25px está OK, pois o width/margin já resolveu o espaçamento externo. */
                 padding-left: 25px; 
             }
             
